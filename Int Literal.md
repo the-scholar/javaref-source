@@ -1,4 +1,4 @@
-@location: /literals/int/
+@location: /literals/integer/
 # Integer Literals
 *A direct (literal) expression of an integral, (`int` or `long`), value in source code.*
 
