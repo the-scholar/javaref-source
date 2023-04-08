@@ -31,6 +31,75 @@ A binary integer literal (base 2), using digits `0` and `1`.
 
 ## Value
 
+## Examples
+[[1]] Simple Examples:
+```
+int x = 0b00101001; // 41
+int y = 41;
+System.out.println(x == y); // Prints true
+```
+Output:
+```output
+true
+```
+
+```
+for (int i = 0xF; i >= 0x0; i--)
+	System.out.println(i);	// println(...) prints integers in decimal (base 10)
+```
+Output:
+```output
+15
+14
+13
+12
+11
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+```
+
+[[2]] Bitflags &amp; Bitmasks:
+```
+int x = 0b0110; // equal to 6
+final int FLAG = 0b0001;
+
+// Enable flag:
+x |= FLAG;// x is now 0b0111 which is equal to 7
+
+// Disable flag:
+x ^= FLAG;// x is now 0b0110 which is 6
+
+// Check for flag:
+boolean flagOn = (x & FLAG) != 0;
+if (flagOn)
+   doSomething();
+```
+
+[[3]] Octal Numbers
+```
+// Each octal digit is 3 bits
+System.out.println(0b111 == 07); // true
+System.out.println(0b111000 == 070); // true
+
+// Octal 7 is binary 111
+// Octal 0 is binary 000
+System.out.pintln(0b111_000_111_000 == 07070); // true
+```
+Output:
+```output
+true
+true
+true
+```
 
 ## Notes
 1. `0` is the only integer literal whose leftmost digit is `0` that is not an octal literal.
